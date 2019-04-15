@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!--
+        Define a profundidade máxima para a árvore "outer join" para
+        associações (one-to-one, many-to-one). O valor 0 desativa o outer join.
+        Valor recomendado: entre 0 e 3
+        -->
+        <property name="hibernate.max_fetch_depth">1</property>
+
+        <!-- Habilita a busca por "outer join" -->
+        <property name="hibernate.use_outer_join">true</property>
+
+        <!--
+        Número máximo de conexões JDBC - não deve ser utilizado em produção.
+        Será criado arquivo específico com as definições do Pool de conexões.
+        -->
+        <property name="connection.pool_size">10</property>
+
+        <!-- Dialeto SQL -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!--
+        Gerenciamento automatico da sessão pelo Hibernate (session-per-request).
+        -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.cache.use_query_cache">false</property>
+
+        <property name="hibernate.connection.isolation">2</property>
+
+      <!-- Mostra o código SQL no console -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- classes mapeadas -->
+        <mapping class="br.com.alberteije.vo.EcfDavCabecalhoVO"/>
+        <mapping class="br.com.alberteije.vo.EcfDavDetalheVO"/>
+        <mapping class="br.com.alberteije.vo.EcfEmpresaVO"/>
+        <mapping class="br.com.alberteije.vo.EcfPreVendaCabecalhoVO"/>
+        <mapping class="br.com.alberteije.vo.EcfPreVendaDetalheVO"/>
+        <mapping class="br.com.alberteije.vo.ProdutoVO"/>
+        <mapping class="br.com.alberteije.vo.UnidadeProdutoVO"/>
+    </session-factory>
+</hibernate-configuration>
