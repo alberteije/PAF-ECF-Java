@@ -2,8 +2,7 @@
 <h1>PAF-ECF - Java</h1>
 						Este protótipo funcional foi desenvolvido juntamente com o e-book Manual de Implantação do PAF-ECF [Java]
             disponível em http://www.alberteije.com/livros/java_paf/. Abaixo você pode ver a descrição de algumas funcionalidades desse protótipo. 
-            
-						<br />
+            <br />
 						<h2>Frente de Caixa - PAF-ECF</h2>
 							<center>
 								<img src="http://www.alberteije.com/images/telas/java_073.jpg" alt="telas" />
@@ -55,8 +54,7 @@
 							<ul>
 								<li>Recebe os arquivos TXT em formato JSON dos terminais de caixa e persiste nas tabelas da retaguarda</li>
 							</ul>						
-
-						<hr />
+<hr />
 						Esse protótipo foi desenvolvido em Java utilizando o NetBeans 7.4.<br /><br />
 						Enjoy it.
 </html>
